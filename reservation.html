@@ -44,6 +44,70 @@
             <div class="container">
                 <h1>Réserver une table</h1>
 
+                <form id="">
+                    <fieldset>
+                        <legend>Coordonnées</legend>
+                        <label for="size_1">Prénom *
+                            <input type="text" name="txt-firstName" required>
+                        </label>
+                        <label for="size_2"> Nom *
+                            <input type="text" name="txt-lastName" required>
+                        </label>
+
+                        <label for="size_2"> Téléphone *
+                            <input type="tel" name="txt-phone" placeholder="xxx xxx-xxxx" required>
+                        </label>
+                        <label for="size_2"> Courriel
+                            <input type="mail" name="mail" placeholder="nom@ndd.com">
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legen>Réservation</legen>
+                        <label for="size_2"> Nombre de personne *
+                            <input type="number" name="nb-person" required>
+                        </label>
+                        <label for=" size_2"> Préférence *
+                            <select name="preference">
+                                <option value="salle à mangere">Salle à manger</option>
+                                <option value="terrasse">Terrasse</option>
+                            </select>
+                        </label>
+                        <label for=" size_2"> Date *
+                            <input type="date" name="date">
+                        </label>
+                        <label for=" size_2"> Heure *
+                            <select name="sel-aliment">
+                                <option value="12:00">12:00</option>
+                                <option value="12:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="17:00">17:00</option>
+                                <option value="17:30">17:30</option>
+                                <option value="18:00">18:00</option>
+                                <option value="18:30">18:30</option>
+                                <option value="19:00">19:00</option>
+                                <option value="19:30">19:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                            </select>
+                        </label>
+                        <label>
+                            <textarea id="comments" name="txt-message"> </textarea>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="newletter">
+                            Voulez-vous recevoir l'infolettre
+                        </label>
+
+                    </fieldset>
+                </form>
 
             </div>
         </section>
