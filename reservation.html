@@ -3,13 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le restaurant Gatoozo est une place atypique et chaleureuse qui propose différentes formules à partager
-    </title>
-    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">>
+    <title>Restaurant Gatoozo | Réservation d'une table </title>
+    <meta name="description" content="Réserver une table chez Gatoozo, restaurant atypique et chaleureux."">
     <!--Styles-->
     <!--Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/img/gatoozo_favicon.png">
+    <link rel=" icon" type="image/x-icon" href="assets/img/gatoozo_favicon.png">
 
     <!--Styles-->
     <link rel="stylesheet" href="assets/css/normalize.css">
@@ -27,10 +26,10 @@
                 </div>
                 <nav>
                     <ul class="flex-row">
-                        <li><a href="index.html" class="active">Accueil</a></li>
+                        <li><a href="index.html">Accueil</a></li>
                         <li><a href="restaurant.html">Restaurant</a></li>
-                        <li><a href="reservation.html">Réservation</a></li>
-                        <li><a href="commandes.html">Ma commande</a></li>
+                        <li><a href="reservation.html" class="active">Réservation</a></li>
+                        <li><a href="commande.html">Ma commande</a></li>
                     </ul>
                 </nav>
             </div>
@@ -44,39 +43,52 @@
             <div class="container">
                 <h1>Réserver une table</h1>
 
-                <form id="">
+                <form action="#" method="post">
                     <fieldset>
-                        <legend>Coordonnées</legend>
-                        <label for="size_1">Prénom *
-                            <input type="text" name="txt-firstName" required>
-                        </label>
-                        <label for="size_2"> Nom *
-                            <input type="text" name="txt-lastName" required>
-                        </label>
+                        <legend>Vos coordonnées</legend>
+                        <h2>Coordonnées</h2>
 
-                        <label for="size_2"> Téléphone *
-                            <input type="tel" name="txt-phone" placeholder="xxx xxx-xxxx" required>
-                        </label>
-                        <label for="size_2"> Courriel
-                            <input type="mail" name="mail" placeholder="nom@ndd.com">
-                        </label>
+                        <div>
+                            <label for="firstName">Prénom * </label>
+                            <input type="text" name="firstName" id="firstName" required>
+                        </div>
+                        <div>
+                            <label for="lastName"> Nom * </label>
+                            <input type="text" name="lastName" id="lastName" required>
+                        </div>
+                        <div>
+
+                            <label for="phone"> Téléphone * </label>
+                            <input type="tel" name="phone" id="phone" placeholder="xxx xxx-xxxx" required>
+                        </div>
+                        <div>
+                            <label for="email"> Courriel </label>
+                            <input type="mail" name="email" id="eamil" placeholder="nom@ndd.com">
+                        </div>
                     </fieldset>
                     <fieldset>
-                        <legen>Réservation</legen>
-                        <label for="size_2"> Nombre de personne *
-                            <input type="number" name="nb-person" required>
-                        </label>
-                        <label for=" size_2"> Préférence *
-                            <select name="preference">
-                                <option value="salle à mangere">Salle à manger</option>
+
+                        <legend>Votre réservation</legend>
+
+                        <div>
+                            <label for="ndPerson"> Nombre de personne (maximum 6personnes par table) * </label>
+                            <input type="number" name="nbPerson" idn="nbPerson" min="1" max="10" required>
+                        </div>
+                        <div>
+                            <label for="preference"> Préférence * </label>
+                            <select name="preference" id="preference">
+                                <option value="-" selected>Choisissez</option>
+                                <option value="salle à manger">Salle à manger</option>
                                 <option value="terrasse">Terrasse</option>
                             </select>
-                        </label>
-                        <label for=" size_2"> Date *
-                            <input type="date" name="date">
-                        </label>
-                        <label for=" size_2"> Heure *
-                            <select name="sel-aliment">
+                        </div>
+                        <div>
+                            <label for="dateReservation"> Date * </label>
+                            <input type="date" name="dateReservation" id="dateReservation" required>
+                        </div>
+                        <div>
+                            <label for="hourReservation"> Heure * </label>
+                            <select name="hourReservation" id="hourReservation" required>
                                 <option value="12:00">12:00</option>
                                 <option value="12:30">12:30</option>
                                 <option value="13:00">13:00</option>
@@ -97,14 +109,18 @@
                                 <option value="20:30">20:30</option>
                                 <option value="21:00">21:00</option>
                             </select>
-                        </label>
-                        <label>
-                            <textarea id="comments" name="txt-message"> </textarea>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="newletter">
-                            Voulez-vous recevoir l'infolettre
-                        </label>
+                        </div>
+                        <div>
+                            <label for="message">Message additionel </label>
+                            <textarea name="message" id="message"> </textarea>
+                        </div>
+                        <div>
+                            <label for="newsletter"> Voulez-vous recevoir l'infolettre ?</label>
+                            <input type="checkbox" name="newsletter" id="newsletter">
+
+                        </div>
+                        <div><input type="button" value="Soumettre la réservation"> </div>
+
 
                     </fieldset>
                 </form>
@@ -119,13 +135,20 @@
         <div class="container">
             <ul class="flex-row flex-space-a">
                 <li>Réalisé par Nathalie Depierre</li>
-                <li>Suivez-nous - <a href="https://www.cegeptr.qc.ca/" target="_blank">Cégep
-                        Trois-Rivières</a></li>
+                <li>
+                    <ul>
+                        <li><strong>Nous joindre</strong></li>
+                        <li><i class="icon" aria-label="Facebook">facebook</i></li>
+                        <li><i class="icon" aria-label="LinkedIn">linkedin</i></li>
+                        <li><i class="icon" aria-label="Twitter">twitter</i></li>
+                        <li><i class="icon" aria-label="Instagram">instagram</i></li>
+                    </ul>
+                </li>
             </ul>
+
             <ul class="flex-row flex-space-a">
                 <li>Intégration Web 1</li>
-                <li>Dans le cadre de Techniques d'intégration - <a href="https://www.cegeptr.qc.ca/"
-                        target="_blank">Cégep
+                <li>Techniques d'intégration - <a href="https://www.cegeptr.qc.ca/" target="_blank">Cégep de
                         Trois-Rivières</a></li>
             </ul>
         </div>

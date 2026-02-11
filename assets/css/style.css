@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Londrina+Solid:wght@100;300;400;900&family=Rampart+One&family=Slackey&display=swap');
 
+
 * {
 	box-sizing: border-box;
 }
@@ -8,8 +9,8 @@
 	--black: #1b1212;
 	--color-1: #f37721;
 	--color-2: #068646;
-	--color-3: #fee8d2;
-	--grey: #e7eff2;
+	--color-3: #f3d2ae;
+	--color-4: #f2e8de;
 	--white: #fff;
 	--grey-2: 231, 239, 242;
 }
@@ -58,7 +59,7 @@ h1:not(.hero div h1)::after {
 
 h1 {
 	font-size: 4rem;
-	color: #fee8d2;
+	color: var(--white);
 }
 
 h2 {
@@ -134,31 +135,10 @@ nav ul li a:hover {
 .active {
 	border-radius: 30px;
 	background: var(--color-1);
-	color: var(--color-3);
+	color: var(--white);
 
 }
 
-/* Fil d'arianne*/
-.breadcrumb ol {
-	padding-left: 0;
-}
-
-.breadcrumb ol li {
-	font-size: 0.8rem;
-	padding-left: 0;
-	list-style: none;
-	display: inline-block;
-}
-
-.breadcrumb ol li a:hover {
-	color: var(--color-2);
-}
-
-.breadcrumb a {
-	display: block;
-	color: var(--color-3);
-	text-decoration: none;
-}
 
 
 /* PIED DE PAGE
@@ -175,6 +155,10 @@ footer .container {
 	font-size: 18px;
 }
 
+.icon {
+	width: 48px;
+	background-color: red;
+}
 
 /* SECTIONS
 /* ========================================================================== */
@@ -212,54 +196,8 @@ section.hero .container {
 	font-style: normal;
 }
 
-/* Video */
-section.video {
-	background-color: var(--color-1);
-}
 
-
-/* Section à propos */
-.about {
-	display: flex;
-	flex-direction: row;
-	gap: 3%;
-	justify-content: space-between;
-	align-items: stretch;
-}
-
-.about .intro {
-	flex: 2 1 0;
-}
-
-.about a {
-	display: flex;
-	flex: 1 1 0;
-	text-decoration: none;
-}
-
-/* Section details des services */
-.detailed {
-	background-color: var(--grey);
-	padding: 2%;
-	margin-bottom: 0;
-}
-
-.detailed .container {
-	padding-left: 20%;
-	margin-bottom: 0;
-}
-
-.detailed .container ul {
-	padding-left: 20px;
-}
-
-.detailed .container ul li {
-	list-style-type: disc;
-	line-height: 1.5;
-}
-
-
-/* CARTES (ACCUEIL - SERVICES)
+/* ACCUEIL
 /* ========================================================================== */
 
 .card {
@@ -286,42 +224,6 @@ section.video {
 	color: var(--color-2);
 }
 
-/* Card Inner Content */
-.services .card .inner {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-}
-
-.about .card {
-	position: relative;
-	justify-content: flex-end;
-	padding: 0;
-	width: 100%;
-	transition: all;
-}
-
-.about .card .inner {
-	position: relative;
-	font-size: 1.25rem;
-	background-color: #fff;
-	color: var(--color-1);
-	height: 150px;
-	padding: 1% 5%;
-}
-
-.about a:hover .inner {
-	background-color: var(--color-3);
-}
-
-.about a:hover .inner p,
-.about a:hover .inner span {
-	color: var(--white);
-}
-
-.card .inner a.button {
-	margin-top: auto;
-}
 
 /* BOUTONS
 /* ========================================================================== */
@@ -367,10 +269,6 @@ a.button:hover {
 	color: var(--color-1);
 }
 
-.detailed a.button {
-	max-width: 250px;
-	align-self: self-end;
-}
 
 /* IMAGES
 /* ========================================================================== */
@@ -381,9 +279,6 @@ a.button:hover {
 	border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
 	transition: border-radius 0.5s ease;
 }
-
-
-
 
 .blob:hover {
 	border-radius: 30% 70% 70% 30% / 50% 60% 40% 50%;
@@ -416,7 +311,6 @@ article .image-placeholder img {
 	margin: 0 auto;
 }
 
-
 .rounded-picture img,
 .image-placeholder img {
 	width: 100%;
@@ -430,7 +324,6 @@ article .image-placeholder img {
 .image-placeholder:hover img {
 	transform: scale(1.5);
 }
-
 
 .avatar img {
 	width: 80px;
@@ -446,10 +339,9 @@ video {
 	height: auto;
 }
 
-/***/
+/*Galerie photos dans restaurant*/
 .gallery {
-
-	background-color: #f37721;
+	background-color: var(--color-1);
 }
 
 ul.img-list {
@@ -471,7 +363,6 @@ ul.img-list {
 .img-list img:hover {
 	transform: scale(1.1);
 	border-radius: 0px 30px;
-
 }
 
 .img-list li:nth-child(3) {
@@ -485,17 +376,14 @@ ul.img-list {
 }
 
 
-
 /* FLEXBOX À RÉUTILISER
 /* ========================================================================== */
 
 /* En ligne */
 .flex-row {
-
 	display: flex;
 	flex-direction: row;
 	gap: 10px;
-
 }
 
 /* En colonne */
@@ -538,56 +426,10 @@ ul.img-list {
 	align-items: stretch;
 }
 
-
-/* NAVIGATION ASIDE (SOUS PAGES SERVICES)
-/* ========================================================================== */
-
-aside {
-	min-width: 20%;
+.row-reverse {
+	flex-direction: row-reverse;
 }
 
-aside a {
-	display: block;
-	color: var(--color-1);
-	text-decoration: none;
-}
-
-aside ul {
-	padding: 0;
-	list-style: none;
-	margin: 0;
-}
-
-aside ul li {
-	display: block;
-	text-decoration: none;
-	border-top: 1px solid var(--color-1);
-}
-
-aside ul li a {
-	display: block;
-	padding: 20px;
-}
-
-aside ul li:hover {
-	background-color: var(--color-1);
-}
-
-aside ul li:hover a {
-	color: var(--white);
-}
-
-/* Titre SERVICES dans la colonne de gauche */
-.col-1 p {
-	color: var(--color-2);
-	font-size: 1.25rem;
-	text-transform: uppercase;
-}
-
-.col-1 p::before {
-	content: '→  ';
-	margin-left: 15px;
-}
 
 /* LISTES
 /* ========================================================================== */
@@ -600,75 +442,90 @@ ul.sup li {
 	gap: 40px;
 }
 
-/* Ißcônes dan sles pages détails */
-ul.sup li img {
-	max-height: 50px;
+
+
+/* COMMANDE + TABLEAUX
+/* ========================================================================== */
+section.commande {
+	background-color: var(--color-3);
 }
 
-/* TABLEAUX
-/* ========================================================================== */
+section.commande .details {
+	width: 60%;
+}
+
+section.commande aside {
+	width: 30%;
+}
 
 table {
+	width: 100%;
+	background-color: var(--white);
 	border-collapse: collapse;
 	border-radius: 12px;
+	margin: 2rem 0px;
+	padding: 1rem;
 }
 
-td,
-th {
-	width: 28%;
-	padding: 10px 20px;
+aside table {
+	background-color: var(--color-4);
+}
+
+thead th {
+	text-align: left;
 	font-size: 1.5rem;
-	text-align: center;
-	vertical-align: top;
-	border-left: 1px solid var(--color-1);
-	border: var(--white) 1px solid;
-	border-radius: 12px;
+	background-color: none;
 }
 
-td:first-child,
-th:first-child {
-	width: 5%;
-	text-align: center;
+.details tr:nth-child(2n) {
+	background-color: var(--color-4)
 }
 
-thead th,
-.price {
-	font-family: "DM Serif Display", serif;
-	font-size: 1.8rem;
-	font-weight: 400;
-	font-style: normal;
+th,
+td {
+	text-align: left;
+	padding: 1rem;
 }
 
-.price span {
-	font-size: 0.8rem;
-	text-transform: lowercase;
+/* RESERVATION FORM
+/* ========================================================================== */
+
+section.reservation {
+	background-color: var(--color-2);
 }
 
-th {
-	background-color: rgba(var(--grey-2), 0.6);
-	font-size: 1.1rem;
+form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 2rem;
 }
 
-tbody th {
-	background-color: rgba(var(--grey-2), 0.6);
-	font-size: 1.2rem;
-}
-
-tbody td {
-	background-color: rgba(var(--grey-2), 0.4);
-	font-size: 1rem;
-}
-
-tfoot td,
-td.darker {
-	background-color: rgba(var(--grey-2), 1);
-	font-size: 1.1rem;
-}
-
-.noshow {
+fieldset {
 	background-color: var(--white);
-	border: none;
+	flex: 1;
+	border-radius: 12px;
+	padding: 2rem;
+	margin: 2rem 0;
 }
+
+fieldset legend {
+	padding-top: 3rem;
+	font-size: 2rem;
+}
+
+label {
+	display: block;
+	width: 100%;
+	padding: 1rem;
+}
+
+input {
+	width: 100%;
+	border-radius: 12px;
+	min-height: 50px;
+}
+
 
 /* TÉMOIGNAGES CLIENTS 
 /* ========================================================================== */
@@ -756,25 +613,4 @@ td.darker {
 	width: 100%;
 	height: 100%;
 	border: 0;
-}
-
-.info p {
-	font-size: 1.25rem;
-	line-height: 1;
-	margin: 15px;
-}
-
-div.icon {
-	width: 40px;
-	height: 40px;
-	background-color: var(--white);
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-div.icon img {
-	width: 25px;
-	height: 25px;
 }

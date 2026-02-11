@@ -4,69 +4,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le restaurant Gatoozo est une place atypique et chaleureuse qui propose différentes formules à partager
-    </title>
-    <meta name="description" content="">
-    <!--Styles-->
-    <!--Favicon-->
+    <title>Restaurant Gatoozo. Commander en ligne</title>
+    <meta name="description" content="Récapitulatif de commande chez Gatoozo, restaurant atypique et chaleureux.">
+
     <link rel="icon" type="image/x-icon" href="assets/img/gatoozo_favicon.png">
 
-    <!--Styles-->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
 <body>
     <header>
-        <section>
-
-            <div class="container flex-row flex-space-a">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="assets/img/gatoozo_logo.png" alt="Restaurant Gatoozo">
-                    </a>
-                </div>
-                <nav>
-                    <ul class="flex-row">
-                        <li><a href="index.html" class="active">Accueil</a></li>
-                        <li><a href="restaurant.html">Restaurant</a></li>
-                        <li><a href="reservation.html">Réservation</a></li>
-                        <li><a href="commande.html">Ma commande</a></li>
-                    </ul>
-                </nav>
+        <nav class="container flex-row flex-space-a">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/gatoozo_logo.png" alt="Retour à l'accueil Restaurant Gatoozo">
+                </a>
             </div>
-
-        </section>
+            <ul class="flex-row">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="restaurant.html">Restaurant</a></li>
+                <li><a href="reservation.html">Réservation</a></li>
+                <li><a href="commande.html" class="active">Ma commande</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Main -->
     <main>
-        <section class="reservation">
+        <section class="commande">
             <div class="container">
-                <h1>Ma commande </h1>
+                <h1>Ma commande</h1>
 
+                <div class="flex-row flex-space-c row-reverse">
+                    <aside>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Détails</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sous-total :</td>
+                                    <td class="price">29.96$</td>
+                                </tr>
+                                <tr>
+                                    <td>Taxes :</td>
+                                    <td class="price">4.49$</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total :</strong></td>
+                                    <td class="price"><strong>34.45$</strong></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <a href="#" target="_blank" class="button">
+                                            Réserver
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </aside>
 
+                    <div class="details">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Entrées</th>
+                                </tr>
+                                <tr>
+                                    <th>Nom du plat</th>
+                                    <th>Prix</th>
+                                    <th>Quantité</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tofu tout flamme</td>
+                                    <td class="price">34$</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Tofu tout flamme</td>
+                                    <td class="price">34$</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Tofu tout flamme</td>
+                                    <td class="price">34$</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Tofu tout flamme</td>
+                                    <td class="price">34$</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Plats principaux</th>
+                                </tr>
+                                <tr>
+                                    <th>Nom du plat</th>
+                                    <th>Prix</th>
+                                    <th>Quantité</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Gloubiboulga</td>
+                                    <td class="price">45$</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Ramen tes fesses</td>
+                                    <td class="price">34$</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Ramen tes fesses</td>
+                                    <td class="price">34$</td>
+                                    <td>1</td>
+                                </tr <tr>
+                                <td>Ramen tes fesses</td>
+                                <td class="price">34$</td>
+                                <td>1</td>
+                                </tr </tbody>
+                        </table>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Plats principaux</th>
+                                </tr>
+                                <tr>
+                                    <th>Nom du plat</th>
+                                    <th>Prix</th>
+                                    <th>Quantité</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Gloubiboulga</td>
+                                    <td class="price">45$</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Ramen tes fesses</td>
+                                    <td class="price">34$</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <!-- End Main -->
-
 
     <footer>
         <div class="container">
             <ul class="flex-row flex-space-a">
                 <li>Réalisé par Nathalie Depierre</li>
-                <li>Suivez-nous - <a href="https://www.cegeptr.qc.ca/" target="_blank">Cégep
-                        Trois-Rivières</a></li>
+                <li>
+                    <ul>
+                        <li><strong>Nous joindre</strong></li>
+                        <li><i class="icon" aria-label="Facebook">facebook</i></li>
+                        <li><i class="icon" aria-label="LinkedIn">linkedin</i></li>
+                        <li><i class="icon" aria-label="Twitter">twitter</i></li>
+                        <li><i class="icon" aria-label="Instagram">instagram</i></li>
+                    </ul>
+                </li>
             </ul>
+
             <ul class="flex-row flex-space-a">
                 <li>Intégration Web 1</li>
-                <li>Dans le cadre de Techniques d'intégration - <a href="https://www.cegeptr.qc.ca/"
-                        target="_blank">Cégep
+                <li>Techniques d'intégration - <a href="https://www.cegeptr.qc.ca/" target="_blank">Cégep de
                         Trois-Rivières</a></li>
             </ul>
         </div>
     </footer>
-
 </body>
 
 </html>
