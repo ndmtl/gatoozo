@@ -15,17 +15,17 @@
 
 <body>
     <header>
-        <nav class="container flex-row flex-space-a">
+        <nav class="container flex flex-between">
             <div class="logo">
                 <a href="index.html">
                     <img src="assets/img/gatoozo_logo.png" alt="Retour à l'accueil Restaurant Gatoozo">
                 </a>
             </div>
-            <ul class="flex-row">
-                <li><a href="index.html">Accueil</a></li>
+            <ul class="flex">
+                <li><a href="index.html" class="active">Accueil</a></li>
                 <li><a href="restaurant.html">Restaurant</a></li>
                 <li><a href="reservation.html">Réservation</a></li>
-                <li><a href="commande.html" class="active">Ma commande</a></li>
+                <li><a href="commande.html">Ma commande</a></li>
             </ul>
         </nav>
     </header>
@@ -35,7 +35,7 @@
             <div class="container">
                 <h1>Commande en ligne</h1>
 
-                <div class="flex-row flex-space-c ">
+                <div class="flex gap-40 ">
                     <div class="details">
                         <table>
                             <thead>
@@ -50,7 +50,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Mille-feuille de la mer</td>
+                                    <td>Mille-feuilles de la mer</td>
                                     <td class="price">14$</td>
                                     <td>1</td>
                                 </tr>
@@ -60,12 +60,12 @@
                                     <td>1</td>
                                 </tr>
                                 <tr>
-                                    <td>Samoussa végétarien et sauce coriandre (4)</td>
+                                    <td>Samoussas végétariens et sauce coriandre (4)</td>
                                     <td class="price">8$</td>
                                     <td>1</td>
                                 </tr>
                                 <tr>
-                                    <td>Cochenille aux oignons caramélisé (6)</td>
+                                    <td>Cochenilles aux oignons caramélisé (6)</td>
                                     <td class="price">10$</td>
                                     <td>1</td>
                                 </tr>
@@ -146,6 +146,12 @@
                                     <td class="price">23$</td>
                                 </tr>
                                 <tr>
+                                    <td colspan="2">
+                                        <hr>
+                                    </td>
+
+                                </tr>
+                                <tr>
                                     <td>Total :</td>
                                     <td class="price">169$</td>
                                 </tr>
@@ -166,10 +172,10 @@
 
     <footer>
         <div class="container">
-            <ul class="flex-row flex-space-a">
-                <li>Réalisé par Nathalie Depierre</li>
+            <ul class="flex flex-between">
+                <li>Réalisé par<a href="mailto:nathalie.depierre@gmail.com?subject=Contact"> Nathalie Depierre</a></li>
                 <li>
-                    <ul>
+                    <ul class="flex flex-between">
                         <li><strong>Nous joindre</strong></li>
                         <li><i class="icon" aria-label="Facebook">facebook</i></li>
                         <li><i class="icon" aria-label="LinkedIn">linkedin</i></li>
@@ -179,7 +185,7 @@
                 </li>
             </ul>
 
-            <ul class="flex-row flex-space-a">
+            <ul class="flex flex-between">
                 <li>Intégration Web 1</li>
                 <li>Techniques d'intégration - <a href="https://www.cegeptr.qc.ca/" target="_blank">Cégep de
                         Trois-Rivières</a></li>

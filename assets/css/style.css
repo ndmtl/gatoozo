@@ -53,7 +53,7 @@ h1:not(.hero div h1)::after {
 	display: block;
 	width: 80px;
 	height: 10px;
-	background-color: var(--color-3);
+	background-color: var(--white);
 	margin-top: 15px;
 }
 
@@ -129,6 +129,7 @@ nav ul li:last-child a {
 nav ul li a:hover {
 	border-radius: 30px;
 	background: var(--color-1);
+	color: var(--white);
 
 }
 
@@ -138,7 +139,6 @@ nav ul li a:hover {
 	color: var(--white);
 
 }
-
 
 
 /* PIED DE PAGE
@@ -379,14 +379,10 @@ ul.img-list {
 /* FLEXBOX À RÉUTILISER
 /* ========================================================================== */
 
-/* En ligne */
-.flex-row {
+.flex {
 	display: flex;
-	flex-direction: row;
-	gap: 10px;
 }
 
-/* En colonne */
 .flex-column {
 	display: flex;
 	flex-direction: column;
@@ -394,7 +390,7 @@ ul.img-list {
 }
 
 /* Espace entre les blocs et centrage vertical */
-.flex-space-a {
+.flex-between {
 	flex: 1;
 	justify-content: space-between;
 	align-items: center;
@@ -402,34 +398,31 @@ ul.img-list {
 }
 
 /* Blocs au départ et centrage vertical */
-.flex-space-b {
-	justify-content: flex-start;
+.flex-vertical-center {
 	align-items: center;
-
-}
-
-/* Espace entre les blocs et blocs au déaprt */
-.flex-space-c {
-	justify-content: space-between;
-	align-items: flex-start;
-}
-
-/* Blocs centrés et au départ */
-.flex-space-d {
-	justify-content: center;
-	align-items: flex-start;
 }
 
 /* Espace entre les blocs et occupation de tout l'espace */
-.flex-space-e {
+.flex-between-vertical-center {
 	justify-content: space-between;
 	align-items: stretch;
 }
 
-.row-reverse {
-	flex-direction: row-reverse;
+.flex-1 {
+	flex: 1;
 }
 
+.gap-10 {
+	gap: 10px;
+}
+
+.gap-20 {
+	gap: 20px;
+}
+
+.gap-40 {
+	gap: 40px;
+}
 
 /* LISTES
 /* ========================================================================== */
@@ -481,10 +474,34 @@ thead th {
 	background-color: var(--color-4)
 }
 
+.details tr:last-child td:first-child {
+	border-bottom-left-radius: 12px;
+}
+
+.details tr:last-child td:last-child {
+	border-bottom-right-radius: 12px;
+}
+
 th,
 td {
 	text-align: left;
 	padding: 1rem;
+}
+
+aside hr {
+	height: 2px;
+	background-color: #1b1212;
+}
+
+@media screen and (max-width: 570px) {
+	body {
+		background-color: lightgreen;
+	}
+
+	.flex {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 /* RESERVATION FORM
@@ -494,36 +511,68 @@ section.reservation {
 	background-color: var(--color-2);
 }
 
-form {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	gap: 2rem;
-}
-
 fieldset {
 	background-color: var(--white);
 	flex: 1;
 	border-radius: 12px;
 	padding: 2rem;
-	margin: 2rem 0;
 }
 
-fieldset legend {
-	padding-top: 3rem;
+fieldset h2 {
 	font-size: 2rem;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 label {
 	display: block;
-	width: 100%;
 	padding: 1rem;
 }
 
-input {
+input,
+textarea,
+select {
+	min-width: 20px;
+	height: 40px;
+	border: 2px solid var(--color-2);
+	border-radius: 10px;
+
+}
+
+input[type=checkbox] {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 40px;
+	height: 20px;
+	border: 2px solid var(--color-2);
+	border-radius: 10px;
+
+}
+
+input[type=checkbox]:checked {
+	background-color: red;
+}
+
+input[type=text],
+input[type=tel],
+input[type=mail],
+textarea,
+input[type=button] {
 	width: 100%;
-	border-radius: 12px;
-	min-height: 50px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	transform: scale(1.1);
+	border: 2px solid var(--color-1);
+	outline: none;
+	transition: all 0.3s ease;
+}
+
+input[type=button] {
+	background-color: var(--color-2);
+	color: var(--white);
+	text-transform: uppercase;
 }
 
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Gatoozo | Réservation d'une table </title>
     <meta name="description" content="Réserver une table chez Gatoozo, restaurant atypique et chaleureux."">
     <!--Styles-->
@@ -17,25 +17,19 @@
 
 <body>
     <header>
-        <section>
-
-            <div class="container flex-row flex-space-a">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="assets/img/gatoozo_logo.png" alt="Restaurant Gatoozo">
-                    </a>
-                </div>
-                <nav>
-                    <ul class="flex-row">
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="restaurant.html">Restaurant</a></li>
-                        <li><a href="reservation.html" class="active">Réservation</a></li>
-                        <li><a href="commande.html">Ma commande</a></li>
-                    </ul>
-                </nav>
+        <nav class="container flex flex-between">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/gatoozo_logo.png" alt="Retour à l'accueil Restaurant Gatoozo">
+                </a>
             </div>
-
-        </section>
+            <ul class="flex">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="restaurant.html">Restaurant</a></li>
+                <li><a href="reservation.html">Réservation</a></li>
+                <li><a href="commande.html">Ma commande</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Main -->
@@ -44,9 +38,9 @@
             <div class="container">
                 <h1>Réserver une table</h1>
 
-                <form action="#" method="post">
+                <form action="#" method="post" class="flex flex-between-vertical-center gap-20">
                     <fieldset>
-                        <legend>Vos coordonnées</legend>
+                        <h2>Vos coordonnées</h2>
 
 
                         <div>
@@ -64,32 +58,33 @@
                         </div>
                         <div>
                             <label for="email"> Courriel </label>
-                            <input type="mail" name="email" id="eamil" placeholder="nom@ndd.com">
+                            <input type="mail" name="email" id="email" placeholder="nom@ndd.com">
                         </div>
                     </fieldset>
                     <fieldset>
 
-                        <legend>Votre réservation</legend>
+                        <h2>Votre réservation</h2>
 
-                        <div>
-                            <label for="ndPerson"> Nombre de personne (maximum 6personnes par table) * </label>
-                            <input type="number" name="nbPerson" idn="nbPerson" min="1" max="10" required>
+                        <div class="flex flex-vertical-center">
+                            <label for="nbPerson" class="flex-1"> Nombre de personnes (max- 10) * </label>
+                            <input type="number" name="nbPerson" idn="nbPerson" min="1" max="10" class="flex-1"
+                                required>
                         </div>
-                        <div>
-                            <label for="preference"> Préférence * </label>
-                            <select name="preference" id="preference">
+                        <div class="flex flex-vertical-center">
+                            <label for="preference" class="flex-1"> Préférence * </label>
+                            <select name="preference" id="preference" class="flex-1">
                                 <option value="-" selected>Choisissez</option>
                                 <option value="salle à manger">Salle à manger</option>
                                 <option value="terrasse">Terrasse</option>
                             </select>
                         </div>
-                        <div>
-                            <label for="dateReservation"> Date * </label>
-                            <input type="date" name="dateReservation" id="dateReservation" required>
+                        <div class="flex flex-vertical-center">
+                            <label for="dateReservation" class="flex-1"> Date * </label>
+                            <input type="date" name="dateReservation" id="dateReservation" class="flex-1" required>
                         </div>
-                        <div>
-                            <label for="hourReservation"> Heure * </label>
-                            <select name="hourReservation" id="hourReservation" required>
+                        <div class="flex flex-vertical-center">
+                            <label for="hourReservation" class="flex-1"> Heure * </label>
+                            <select name="hourReservation" id="hourReservation" class="flex-1" required>
                                 <option value="12:00">12:00</option>
                                 <option value="12:30">12:30</option>
                                 <option value="13:00">13:00</option>
@@ -115,14 +110,13 @@
                             <label for="message">Message additionel </label>
                             <textarea name="message" id="message"> </textarea>
                         </div>
-                        <div>
-                            <label for="newsletter"> Voulez-vous recevoir l'infolettre ?</label>
+                        <div class="flex flex-vertical-center">
                             <input type="checkbox" name="newsletter" id="newsletter">
-
+                            <label for="newsletter"> Voulez-vous recevoir l'infolettre ?</label>
                         </div>
-                        <div><input type="button" value="Soumettre la réservation"> </div>
-
-
+                        <div>
+                            <input type="button" value="Soumettre la réservation">
+                        </div>
                     </fieldset>
                 </form>
 
@@ -131,13 +125,12 @@
     </main>
     <!-- End Main -->
 
-
     <footer>
         <div class="container">
-            <ul class="flex-row flex-space-a">
-                <li>Réalisé par Nathalie Depierre</li>
+            <ul class="flex flex-between">
+                <li>Réalisé par<a href="mailto:nathalie.depierre@gmail.com?subject=Contact"> Nathalie Depierre</a></li>
                 <li>
-                    <ul>
+                    <ul class="flex flex-between">
                         <li><strong>Nous joindre</strong></li>
                         <li><i class="icon" aria-label="Facebook">facebook</i></li>
                         <li><i class="icon" aria-label="LinkedIn">linkedin</i></li>
@@ -147,7 +140,7 @@
                 </li>
             </ul>
 
-            <ul class="flex-row flex-space-a">
+            <ul class="flex flex-between">
                 <li>Intégration Web 1</li>
                 <li>Techniques d'intégration - <a href="https://www.cegeptr.qc.ca/" target="_blank">Cégep de
                         Trois-Rivières</a></li>
