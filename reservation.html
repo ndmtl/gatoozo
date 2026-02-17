@@ -24,9 +24,9 @@
                 </a>
             </div>
             <ul class="flex">
-                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="restaurant.html">Restaurant</a></li>
-                <li><a href="reservation.html">Réservation</a></li>
+                <li><a href="reservation.html" class="active">Réservation</a></li>
                 <li><a href="commande.html">Ma commande</a></li>
             </ul>
         </nav>
@@ -38,22 +38,22 @@
             <div class="container">
                 <h1>Réserver une table</h1>
 
-                <form action="#" method="post" class="flex flex-between-vertical-center gap-20">
+                <form action="reservation-envoyee.html" method="get" class="flex flex-between-vertical-center gap-20">
                     <fieldset>
                         <h2>Vos coordonnées</h2>
 
 
                         <div>
-                            <label for="firstName">Prénom * </label>
+                            <label for="firstName">Prénom* </label>
                             <input type="text" name="firstName" id="firstName" required>
                         </div>
                         <div>
-                            <label for="lastName"> Nom * </label>
+                            <label for="lastName"> Nom* </label>
                             <input type="text" name="lastName" id="lastName" required>
                         </div>
                         <div>
 
-                            <label for="phone"> Téléphone * </label>
+                            <label for="phone"> Téléphone* </label>
                             <input type="tel" name="phone" id="phone" placeholder="xxx xxx-xxxx" required>
                         </div>
                         <div>
@@ -66,12 +66,12 @@
                         <h2>Votre réservation</h2>
 
                         <div class="flex flex-vertical-center">
-                            <label for="nbPerson" class="flex-1"> Nombre de personnes (max- 10) * </label>
+                            <label for="nbPerson" class="flex-1"> Nombre de personnes (max- 10)* </label>
                             <input type="number" name="nbPerson" idn="nbPerson" min="1" max="10" class="flex-1"
-                                required>
+                                placeholder="1" required>
                         </div>
                         <div class="flex flex-vertical-center">
-                            <label for="preference" class="flex-1"> Préférence * </label>
+                            <label for="preference" class="flex-1"> Préférence* </label>
                             <select name="preference" id="preference" class="flex-1">
                                 <option value="-" selected>Choisissez</option>
                                 <option value="salle à manger">Salle à manger</option>
@@ -79,11 +79,11 @@
                             </select>
                         </div>
                         <div class="flex flex-vertical-center">
-                            <label for="dateReservation" class="flex-1"> Date * </label>
+                            <label for="dateReservation" class="flex-1"> Date* </label>
                             <input type="date" name="dateReservation" id="dateReservation" class="flex-1" required>
                         </div>
                         <div class="flex flex-vertical-center">
-                            <label for="hourReservation" class="flex-1"> Heure * </label>
+                            <label for="hourReservation" class="flex-1"> Heure* </label>
                             <select name="hourReservation" id="hourReservation" class="flex-1" required>
                                 <option value="12:00">12:00</option>
                                 <option value="12:30">12:30</option>
@@ -108,14 +108,14 @@
                         </div>
                         <div>
                             <label for="message">Message additionel </label>
-                            <textarea name="message" id="message"> </textarea>
+                            <textarea name="message" id="message" rows="3"> </textarea>
                         </div>
                         <div class="flex flex-vertical-center">
                             <input type="checkbox" name="newsletter" id="newsletter">
                             <label for="newsletter"> Voulez-vous recevoir l'infolettre ?</label>
                         </div>
                         <div>
-                            <input type="button" value="Soumettre la réservation">
+                            <button type="submit">Soumettre la réservation</button>
                         </div>
                     </fieldset>
                 </form>
@@ -131,7 +131,7 @@
                 <li>Réalisé par<a href="mailto:nathalie.depierre@gmail.com?subject=Contact"> Nathalie Depierre</a></li>
                 <li>
                     <ul class="flex flex-between">
-                        <li><strong>Nous joindre</strong></li>
+                        <li>Nous joindre</li>
                         <li><i class="icon" aria-label="Facebook">facebook</i></li>
                         <li><i class="icon" aria-label="LinkedIn">linkedin</i></li>
                         <li><i class="icon" aria-label="Twitter">twitter</i></li>

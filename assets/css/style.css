@@ -11,6 +11,7 @@
 	--color-2: #068646;
 	--color-3: #f3d2ae;
 	--color-4: #f2e8de;
+	--color-5: #12b162;
 	--white: #fff;
 	--grey-2: 231, 239, 242;
 }
@@ -68,6 +69,7 @@ h2 {
 
 h3 {
 	font-size: 2rem;
+	margin-top: 0;
 }
 
 p {
@@ -95,11 +97,22 @@ a:hover {
 
 footer .container,
 main .container {
-	padding: 5% 1%;
+	padding: 3% 1%;
 }
 
 footer a {
-	color: var(--color-3);
+	font-weight: bold;
+	color: var(--white);
+}
+
+footer .container>ul:nth-child(1),
+footer ul:nth-child(2) {
+	padding: 2rem 0;
+}
+
+footer ul:nth-child(2) {
+	border-top: solid 2px var(--white);
+
 }
 
 /* EN-TËTES & NAVIGATION
@@ -228,7 +241,8 @@ section.hero .container {
 /* BOUTONS
 /* ========================================================================== */
 
-a.button {
+a.button,
+a.button-2 {
 	position: relative;
 	display: inline-block;
 	width: fit-content;
@@ -236,20 +250,26 @@ a.button {
 	margin-top: 1rem;
 	border-radius: 30px;
 	background-color: var(--color-1);
+	border: solid 1px var(--white);
+	margin: 0.5rem;
 	color: var(--white);
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 600;
 	text-align: left;
 	transition: background-color 0.5s ease-in-out;
-
 }
 
+a.button-2 {
+	background-color: var(--color-3);
+	color: var(--color-1);
+	transition: background-color 0.5s ease-in-out;
+}
 
-a.button::before {
+a.button::before,
+a.button-2::before {
 	content: '+ ';
 	padding-right: 0.5rem;
-
 }
 
 a.button:hover {
@@ -257,12 +277,16 @@ a.button:hover {
 	color: var(--color-1);
 }
 
-.hero a.button {
+a.button-2:hover {
+	background-color: var(--color-1);
+	color: var(--white);
+}
+
+/* .hero a.button {
 	width: fit-content;
 	background-color: transparent;
-	border: solid 1px var(--white);
-	margin: 0.5rem;
-}
+
+} */
 
 .hero a.button:hover {
 	background-color: var(--color-3);
@@ -389,7 +413,6 @@ ul.img-list {
 	width: 100%;
 }
 
-/* Espace entre les blocs et centrage vertical */
 .flex-between {
 	flex: 1;
 	justify-content: space-between;
@@ -397,12 +420,10 @@ ul.img-list {
 	gap: 40px;
 }
 
-/* Blocs au départ et centrage vertical */
 .flex-vertical-center {
 	align-items: center;
 }
 
-/* Espace entre les blocs et occupation de tout l'espace */
 .flex-between-vertical-center {
 	justify-content: space-between;
 	align-items: stretch;
@@ -490,19 +511,9 @@ td {
 
 aside hr {
 	height: 2px;
-	background-color: #1b1212;
+	background-color: var(--black);
 }
 
-@media screen and (max-width: 570px) {
-	body {
-		background-color: lightgreen;
-	}
-
-	.flex {
-		display: flex;
-		flex-direction: column;
-	}
-}
 
 /* RESERVATION FORM
 /* ========================================================================== */
@@ -516,6 +527,7 @@ fieldset {
 	flex: 1;
 	border-radius: 12px;
 	padding: 2rem;
+	border: 1px solid var(--color-3);
 }
 
 fieldset h2 {
@@ -532,10 +544,16 @@ input,
 textarea,
 select {
 	min-width: 20px;
+	border: 2px solid var(--color-2);
+	border-radius: 10px;
+}
+
+input,
+select {
+	min-width: 20px;
 	height: 40px;
 	border: 2px solid var(--color-2);
 	border-radius: 10px;
-
 }
 
 input[type=checkbox] {
@@ -544,37 +562,79 @@ input[type=checkbox] {
 	width: 40px;
 	height: 20px;
 	border: 2px solid var(--color-2);
-	border-radius: 10px;
+	border-radius: 20px;
+	position: relative;
+	transition: all 0.3s ease;
+	background-color: transparent;
+	margin-right: 10px;
 
 }
+
+/* Le boutton toogle source W#C School*/
+input[type=checkbox]::before {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 12px;
+	height: 12px;
+	background-color: var(--color-2);
+	border-radius: 50%;
+	transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
 
 input[type=checkbox]:checked {
-	background-color: red;
+	background-color: var(--color-5);
+	border-color: var(--color-5);
+
 }
+
+input[type=checkbox]:checked::before {
+	transform: translateX(20px);
+	background-color: var(--white)
+}
+
+
 
 input[type=text],
 input[type=tel],
 input[type=mail],
 textarea,
-input[type=button] {
+button {
 	width: 100%;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-	transform: scale(1.1);
+	transform: scale(1.05);
 	border: 2px solid var(--color-1);
 	outline: none;
 	transition: all 0.3s ease;
 }
 
-input[type=button] {
+button[type="submit"] {
+	position: relative;
+	display: inline-block;
+	padding: 1rem 2rem;
+	margin-top: 1rem;
+	border-radius: 30px;
 	background-color: var(--color-2);
+	border: 2px solid var(--color-2);
 	color: var(--white);
+	text-decoration: none;
 	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color 0.5s ease-in-out;
 }
 
+button[type="submit"]:hover {
+	background-color: var(--color-1);
+	color: var(--white);
+}
 
 /* TÉMOIGNAGES CLIENTS 
 /* ========================================================================== */
@@ -610,7 +670,6 @@ input[type=button] {
 	margin: 1rem 0 0;
 }
 
-
 .testimony span {
 	display: block;
 	text-align: left;
@@ -621,29 +680,29 @@ input[type=button] {
 /* CONTACT & CARTE GOOGLE
 /* ========================================================================== */
 
-.contact .flex-row * {
-	flex: 1;
-	color: var(--white);
-}
-
-.contact h2 {
-	margin-bottom: 0
-}
-
-.contact p {
-	font-size: 1.25rem;
-	line-height: 1;
-	margin-bottom: 0
-}
-
 /* Contact */
 .contact {
 	background-color: var(--color-2);
 }
 
-.contact a:hover {
-	text-decoration: underline;
-	color: var(--color-1);
+address h2 {
+	margin-bottom: 0
+}
+
+address p {
+	font-size: 1.25rem;
+	line-height: 1;
+	margin-bottom: 0
+}
+
+address h2,
+address p,
+address a {
+	color: var(--white);
+}
+
+address a:hover {
+	color: var(--color-3);
 }
 
 
@@ -662,4 +721,17 @@ input[type=button] {
 	width: 100%;
 	height: 100%;
 	border: 0;
+}
+
+/* RESPONSIVE
+/*==================================================== */
+@media screen and (max-width: 570px) {
+	body {
+		background-color: lightgreen;
+	}
+
+	.flex {
+		display: flex;
+		flex-direction: column;
+	}
 }
