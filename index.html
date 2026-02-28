@@ -9,16 +9,19 @@
     <meta name="description"
         content="Le restaurant Gatoozo est une place atypique et chaleureuse qui propose différentes formules à partager">
 
-    <!--Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/img/gatoozo_favicon.png">
 
+    <!--Favicon-->
+    <link rel=" icon" type="image/x-icon" href="assets/img/gatoozo_favicon.png">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!--Styles-->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
-    <header>
+    <header class="bg-color-1">
         <nav class="container flex flex-between">
             <div class="logo">
                 <a href="index.html">
@@ -40,96 +43,112 @@
     </header>
     <main>
         <!-- Hero -->
-        <section class="hero">
+        <section class="hero bg-color-1">
             <div class="container">
                 <div>
                     <span>La bonne franquette depuis 1998</span>
                     <h1>Restaurant Gatoozo</h1>
                     <p>
                         Restaurant amical avec différentes formules à partager entre amis. Notre carte est une lettre
-                        d'amour à nos producteurs locaux. Dans un décor chaleyereux, les boiseries patinées et le
+                        d'amour à nos producteurs locaux. Dans un décor chaleureux, les boiseries patinées et le
                         brouhaha joyeux des tablées, vous êtes ici chez vous.
-                        "On ne
-                        vient pas seulement pour manger, on vient pour se souvenir du goût des bonnes choses."
                     </p>
                     <a href="commande.html" class="button-2">Commander en ligne</a>
                     <a href="reservation.html" class="button">Réserver</a>
                 </div>
-                <div>
-                    <img src="assets/img/alex-haney-CAhjZmVk5H4-unsplash.jpg" alt="Tablée heureuse chez Gatoozo"
-                        class="blob">
+                <div class="blob width-xl">
+                    <img src="assets/img/alex-haney-CAhjZmVk5H4-unsplash.jpg" alt="Tablée heureuse chez Gatoozo">
                 </div>
             </div>
         </section>
-        <section class="menu">
+        <section class="menu bg-color-3">
             <div class="container">
-                <h2>Quatre formules à partager</h2>
+                <h2>Des formules à partager</h2>
 
                 <div class="content flex-row">
 
+
+
                     <!-- Menu 1 -->
                     <div class="card">
-                        <div class="inner flex-column">
+                        <div class="inner flex-column flex-between-center">
                             <div class="illustration">
-                                <img src="assets/img/Sophie_Matin.jpg" alt="Sophie Martin">
+                                <div class="blob width-s">
+                                    <img src="assets/img/jakub-kapusnak-4f4YZfDMLeU-unsplash.jpg"
+                                        alt="Tablée heureuse chez Gatoozo">
+                                </div>
                             </div>
-                            <h3></h3>
+                            <h3>Voyage aux Iles</h3>
                             <p>
-                                Ce service a complètement transformé ma façon d'aborder mes projets. La qualité et le
-                                soin apportés aux séjours rendent chaque expérience unique et mémorable.
+                                Notre formule Voyage aux Îles célèbre les richesses marines des Îles-de-la-Madeleine :
+                                entrée fraîcheur, langouste ou fruits de mer en plat principal, et dessert inspiré des
+                                traditions locales. Une expérience simple, vraie et délicieusement iodée.
                             </p>
-                            <p class="price">15$</p>
+                            <p class="price">55$<span>/per-</span></p>
                         </div>
                     </div>
 
                     <!-- Menu 2 -->
                     <div class="card">
-                        <div class="inner flex-column flex-between-center">
-                            <div class="illustration">
-                                <img src="assets/img/Sophie_Matin.jpg" alt="Sophie Martin">
+                        <div class="inner flex-column">
+                            <div class="blob width-s">
+                                <img src="assets/img/jakub-kapusnak-4f4YZfDMLeU-unsplash.jpg"
+                                    alt="Tablée heureuse chez Gatoozo">
                             </div>
-                            <h3></h3>
+                            <h3>La cabanne à Michelle</h3>
                             <p>
-                                Ce service a complètement transformé ma façon d'aborder mes projets. La qualité et le
-                                soin apportés aux séjours rendent chaque expérience unique et mémorable.
+                                Cette formule revisite les classiques avec finesse. Une entrée inspirée des
+                                saveurs du terroir ouvre le bal, suivie d’un burger maison travaillé comme un plat
+                                signature : viande de qualité, condiments maison, fromages régionaux et cuisson
+                                impeccable. et pour finir, un dessert maison qui sent bon la tradition.
+                                Une formule généreuse, mais pensée avec soin.
                             </p>
-                            <p class="price">15$</p>
+                            <p class="price">45$<span>/per-</span></p>
                         </div>
                     </div>
-
                     <!-- Menu 3 -->
+
                     <div class="card">
                         <div class="inner flex-column">
-                            <div class="illustration">
-                                <img src="assets/img/Sophie_Matin.jpg" alt="Sophie Martin">
+                            <div class="blob width-s">
+                                <img src="assets/img/jakub-kapusnak-4f4YZfDMLeU-unsplash.jpg"
+                                    alt="Tablée heureuse chez Gatoozo">
                             </div>
-                            <h3></h3>
+                            <h3>Gloubiboulga</h3>
                             <p>
-                                Ce service a complètement transformé ma façon d'aborder mes projets. La qualité et le
-                                soin apportés aux séjours rendent chaque expérience unique et mémorable.
+                                5 plats à choisir et dans toutes les entrées et tous les plats de notre carte bien
+                                fournie. Goûtez à toutes les saveurs et enivrez-vous de nos meilleurs houblons dans
+                                notre sélection de bières de micro*.
                             </p>
-                            <p class="price">15$</p>
+                            <p class="price">65$<span>/per-</span></p>
                         </div>
                     </div>
                     <!-- Menu 4 -->
                     <div class="card">
-                        <div class="inner flex-column">
-                            <div class="illustration">
-                                <img src="assets/img/Sophie_Matin.jpg" alt="Sophie Martin">
-                            </div>
-                            <h3></h3>
+                        <div class="inner flex-column drink">
+
+                            <h3>Bières du mois</h3>
                             <p>
-                                Ce service a complètement transformé ma façon d'aborder mes projets. La qualité et le
-                                soin apportés aux séjours rendent chaque expérience unique et mémorable.
+                                La chute <span>/per-</ span>
                             </p>
-                            <p class="price">15$</p>
+                            <p>
+                                Citrus amère<span>/per-</span> </p>
+                            <p>
+                                Stout crinkée<span>/per-</span> </p>
+                            <p>
+                                Youplala<span>/per-</span> </p>
+                            <p>
+                                NEIPA <span>/per-</span> </p>
+
+
                         </div>
                     </div>
+                    <!-- Fin cards -->
                 </div>
             </div>
         </section>
         <!-- Témoignages -->
-        <section class="testimony">
+        <section class="testimony bg-color-2">
             <div class="container">
                 <h2>Témoignages de clients</h2>
                 <h3>Clients satisfaits</h3>
@@ -240,22 +259,15 @@
     </main>
 
     <!--Footer-->
-    <footer>
+    <footer class="bg-color-2">
         <div class="container">
             <ul class="flex flex-between">
                 <li>
                     <ul class="social-networks flex flex-between gap-10">
                         <li>
                             <a href="mailto:nathalie.depierre@gmail.com?subject=Contact">
+                                <i class="fa-solid fa-envelope" aria-label="Enveloppe pour courriel" role="img"></i>
 
-                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 120 120">
-
-                                    <rect class="cls-1" x=".94" y="-.76" width="120" height="120" rx="31.39" ry="31.39"
-                                        transform="translate(120.18 -1.7) rotate(90)" />
-                                    <path class="cls-2"
-                                        d="M93.38,26.39H27.1c-7.04,0-12.74,5.7-12.74,12.74v41.93c0,7.04,5.7,12.74,12.74,12.74h66.28c7.03,0,12.74-5.7,12.74-12.74v-41.93c0-7.04-5.7-12.74-12.74-12.74ZM46.29,71.87l-17.84,15.22c-1.26,1.07-3.15.92-4.22-.33-1.07-1.26-.92-3.15.34-4.22l17.84-15.22c1.26-1.07,3.15-.92,4.22.34,1.07,1.26.92,3.15-.33,4.22ZM60.24,66.09c-2.39,0-4.7-.8-6.51-2.36h0s0,0,0,0c0,0,0,0,0,0l-27.37-23.76c-1.25-1.09-1.38-2.98-.3-4.23,1.09-1.25,2.98-1.38,4.23-.3l27.38,23.76c.59.52,1.55.9,2.57.89,1.02,0,1.97-.36,2.59-.9h.01s27.35-23.75,27.35-23.75c1.25-1.08,3.14-.95,4.23.3,1.08,1.25.95,3.14-.3,4.23l-27.38,23.76c-1.8,1.55-4.11,2.35-6.5,2.36ZM96.25,86.76c-1.07,1.26-2.97,1.41-4.22.33l-17.84-15.22c-1.26-1.07-1.41-2.97-.33-4.22,1.07-1.26,2.97-1.41,4.22-.34l17.84,15.22c1.26,1.07,1.41,2.97.33,4.22Z" />
-                                </svg>
                             </a>
                         </li>
                         <li>Réalisé par Nathalie
@@ -270,14 +282,7 @@
                         <li>
                             <!--facebook-->
                             <a href="#">
-                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 120 120">
-
-                                    <path class="cls-1"
-                                        d="M-.28,87.93V31.61C-.28,14.62,13.84.71,31.11.71h57.22c17.26,0,31.39,13.9,31.39,30.9v56.32c0,16.99-14.13,30.9-31.39,30.9h-19.24l-10.07-2.42-8.68,2.42h-19.24c-17.26,0-31.39-13.9-31.39-30.9Z" />
-                                    <path class="cls-2"
-                                        d="M83.07,78.78l2.66-17.07h-16.64v-11.08c0-4.67,2.32-9.22,9.78-9.22h7.57v-14.53s-6.87-1.15-13.43-1.15c-13.71,0-22.66,8.18-22.66,22.98v13.01h-15.23v17.07h15.23v40.05h18.75v-40.05h13.98Z" />
-                                </svg>
+                                <i class="fa-brands fa-square-facebook" aria-label="Facebook" role="img"></i>
                             </a>
                             <!--facebook-->
                         </li>
@@ -286,24 +291,7 @@
                         <li>
                             <!--linkedin-->
                             <a href="#">
-                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 120 120">
-
-                                    <g>
-                                        <path class="cls-2"
-                                            d="M77.82,36.63c-2.28,0-4.12,1.85-4.12,4.12s1.85,4.12,4.12,4.12,4.12-1.85,4.12-4.12-1.85-4.12-4.12-4.12Z" />
-                                        <path class="cls-2"
-                                            d="M59.49,41.92c-9.55,0-17.33,7.77-17.33,17.32s7.77,17.32,17.33,17.32,17.32-7.77,17.32-17.32-7.77-17.32-17.32-17.32ZM59.49,70.34c-6.12,0-11.1-4.98-11.1-11.1s4.98-11.1,11.1-11.1,11.1,4.98,11.1,11.1-4.98,11.1-11.1,11.1Z" />
-                                        <path class="cls-2"
-                                            d="M73.24,94.42h-28.09c-11.65,0-21.13-9.48-21.13-21.13v-28.09c0-11.65,9.48-21.13,21.13-21.13h28.09c11.65,0,21.13,9.48,21.13,21.13v28.09c0,11.65-9.48,21.13-21.13,21.13ZM45.15,30.69c-8,0-14.51,6.51-14.51,14.51v28.09c0,8,6.51,14.51,14.51,14.51h28.09c8,0,14.51-6.51,14.51-14.51v-28.09c0-8-6.51-14.51-14.51-14.51h-28.09Z" />
-                                    </g>
-                                    <rect class="cls-1" x="1.04" y="-.15" width="119" height="120" rx="29.5" ry="29.5"
-                                        transform="translate(120.39 -.69) rotate(90)" />
-                                    <path class="cls-2"
-                                        d="M35.38,48.77h11.62v37.02h-11.62v-37.02ZM41.19,30.37c3.72,0,6.73,2.99,6.73,6.67s-3.01,6.68-6.73,6.68-6.74-2.99-6.74-6.68,3.01-6.67,6.74-6.67" />
-                                    <path class="cls-2"
-                                        d="M54.28,48.77h11.13v5.06h.15c1.55-2.91,5.34-5.98,10.99-5.98,11.75,0,13.91,7.66,13.91,17.63v20.3h-11.6v-18c0-4.3-.08-9.82-6.03-9.82s-6.96,4.68-6.96,9.5v18.31h-11.6v-37.02Z" />
-                                </svg>
+                                <i class="fa-brands fa-linkedin" aria-label="Linkedin" role="img"></i>
                             </a>
                             <!--linkedin-->
                         </li>
@@ -313,14 +301,7 @@
                             <!--X-->
                             <a href="#">
 
-                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 120 120">
-
-                                    <rect class="cls-1" x="-.17" y="-.76" width="120" height="120" rx="31.39" ry="31.39"
-                                        transform="translate(119.07 -.59) rotate(90)" />
-                                    <path class="cls-2"
-                                        d="M73.02,54.65l25.38-27.14h-9.64l-19.92,21.31-15.25-21.31h-26.36l26.68,37.27-26.68,28.54h9.64l21.23-22.7,16.25,22.7h26.36l-27.68-38.67ZM40.81,34.48h9.19l37.12,51.85h-9.19l-37.12-51.85Z" />
-                                </svg>
+                                <i class="fa-brands fa-x-twitter" aria-label="Twitter X " role="img"></i>
                             </a>
                             <!--X-->
                         </li>
@@ -329,20 +310,7 @@
                         <li>
                             <!--instagram-->
                             <a href="#">
-                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 120 120">
-
-                                    <rect class="cls-1" x="-.8" y="-.76" width="120" height="120" rx="31.39" ry="31.39"
-                                        transform="translate(118.44 .05) rotate(90)" />
-                                    <g>
-                                        <path class="cls-2"
-                                            d="M77.82,36.63c-2.28,0-4.12,1.85-4.12,4.12s1.85,4.12,4.12,4.12,4.12-1.85,4.12-4.12-1.85-4.12-4.12-4.12Z" />
-                                        <path class="cls-2"
-                                            d="M59.49,41.92c-9.55,0-17.33,7.77-17.33,17.32s7.77,17.32,17.33,17.32,17.32-7.77,17.32-17.32-7.77-17.32-17.32-17.32ZM59.49,70.34c-6.12,0-11.1-4.98-11.1-11.1s4.98-11.1,11.1-11.1,11.1,4.98,11.1,11.1-4.98,11.1-11.1,11.1Z" />
-                                        <path class="cls-2"
-                                            d="M73.24,94.42h-28.09c-11.65,0-21.13-9.48-21.13-21.13v-28.09c0-11.65,9.48-21.13,21.13-21.13h28.09c11.65,0,21.13,9.48,21.13,21.13v28.09c0,11.65-9.48,21.13-21.13,21.13ZM45.15,30.69c-8,0-14.51,6.51-14.51,14.51v28.09c0,8,6.51,14.51,14.51,14.51h28.09c8,0,14.51-6.51,14.51-14.51v-28.09c0-8-6.51-14.51-14.51-14.51h-28.09Z" />
-                                    </g>
-                                </svg>
+                                <i class="fa-brands fa-square-instagram" aria-label="Instagram" role="img"></i>
                             </a>
                             <!--Instagram-->
                         </li>
@@ -352,9 +320,11 @@
             </ul>
 
             <ul class="flex flex-between">
-                <li>Intégration Web 1</li>
-                <li>Techniques d'intégration - <a href="https://www.cegeptr.qc.ca/" target="_blank">Cégep de
+                <li class="flex-1">Intégration Web 1</li>
+
+                <li><a href="https://www.cegeptr.qc.ca/" target="_blank">Cégep de
                         Trois-Rivières</a></li>
+                <li>Hiver 2026 </li>
             </ul>
         </div>
     </footer>
