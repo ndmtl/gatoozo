@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Gatoozo | Réservation d'une table </title>
-    <meta name="description" content="Réserver une table chez Gatoozo, restaurant atypique et chaleureux."">
- 
+    <meta name="description" content="Réserver une table chez Gatoozo, restaurant atypique et chaleureux.">
+
     <!--Favicon-->
     <link rel=" icon" type="image/x-icon" href="assets/img/gatoozo_favicon.png">
     <!--Font Awesome-->
@@ -29,7 +29,7 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="restaurant.html">Restaurant</a></li>
                 <li><a href="reservation.html" class="active">Réservation</a></li>
-                <li><a href="commande.html">Ma commande</a></li>
+                <li><a href="commande.html"><i class="fa-solid fa-bag-shopping"></i> Ma commande</a></li>
             </ul>
 
             <!--toggle-->
@@ -38,7 +38,6 @@
             </ul>
         </nav>
     </header>
-
     <!-- Main -->
     <main>
         <section class="reservation bg-color-2">
@@ -66,7 +65,7 @@
                         </div>
                         <div>
                             <label for="email"> Courriel </label>
-                            <input type="mail" name="email" id="email" placeholder="nom@ndd.com">
+                            <input type="email" name="email" id="email" placeholder="nom@ndd.com">
                         </div>
                     </fieldset>
                     <fieldset>
@@ -75,7 +74,7 @@
 
                         <div class="flex flex-vertical-center">
                             <label for="nbPerson" class="flex-2"> Nombre de personnes (max- 10)* </label>
-                            <input type="number" name="nbPerson" idn="nbPerson" min="1" max="10" class="flex-1"
+                            <input type="number" name="nbPerson" id="nbPerson" min="1" max="10" class="flex-1"
                                 placeholder="0" required>
                         </div>
                         <div class="flex flex-vertical-center">
@@ -88,7 +87,8 @@
                         </div>
                         <div class="flex flex-vertical-center">
                             <label for="dateReservation" class="flex-2"> Date* </label>
-                            <input type="date" name="dateReservation" id="dateReservation" class="flex-1" required>
+                            <input type="date" name="dateReservation" id="dateReservation" lang="fr" class="flex-1"
+                                required>
                         </div>
                         <div class="flex flex-vertical-center">
                             <label for="hourReservation" class="flex-2"> Heure* </label>
