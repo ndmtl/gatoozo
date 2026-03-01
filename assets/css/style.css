@@ -12,13 +12,15 @@
 	--color-4: #c7beae;
 	--color-5: #a3e9c0;
 	--white: #fff;
-	--grey-2: 231, 239, 242;
+
 }
 
 html {
 	font-size: 16px;
 	font-family: "Roboto", sans-serif;
 	color: var(--black);
+	line-height: 1;
+
 }
 
 
@@ -48,7 +50,7 @@ h4 {
 }
 
 /* Ligne sous titres sauf sur la page d'accueil */
-h1:not(.hero div h1)::after {
+h1:after {
 	content: '';
 	display: block;
 	width: 80px;
@@ -57,13 +59,17 @@ h1:not(.hero div h1)::after {
 	margin-top: 15px;
 }
 
+h1.no-decoration::after {
+	display: none;
+}
+
 h1 {
 	font-size: 3rem;
 }
 
 h2 {
 	font-size: 2.5rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 }
 
 h3 {
@@ -121,7 +127,6 @@ header nav.container {
 
 }
 
-
 /* EN-TËTES & NAVIGATION
 /* ========================================================================== */
 
@@ -160,7 +165,6 @@ li.hamburger {
 .hamburger span::after {
 	top: -10px;
 }
-
 
 .hamburger:hover span {
 	background: transparent;
@@ -206,6 +210,10 @@ nav ul li a:hover {
 	background: var(--black);
 	text-decoration: none;
 	color: var(--white);
+}
+
+nav .fa-solid {
+	padding-right: 0.5rem;
 }
 
 .active {
@@ -262,7 +270,6 @@ section {
 
 /* Section hero */
 
-
 section.hero .container {
 	min-height: 80vh;
 	display: grid;
@@ -278,8 +285,9 @@ section.hero span {
 }
 
 section.hero span {
-	font-size: 1.25rem;
+	font-size: 1rem;
 	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .hero div h1 {
@@ -320,11 +328,20 @@ section.hero span {
 	margin: 0
 }
 
+p.price span {
+	font-size: 1.5rem;
+
+}
+
 .drink p {
 	display: flex;
 	justify-content: space-between;
 	border-bottom: solid 2px var(--black);
 	text-transform: uppercase;
+}
+
+.drink span {
+	font-weight: bold;
 }
 
 /* BOUTONS
@@ -339,7 +356,7 @@ a.button-2 {
 	border-radius: 30px;
 	background-color: transparent;
 	border: solid 1px var(--black);
-	margin: 0.5rem 00.5rem 1rem;
+	margin: 0.5rem 1rem 0.5rem 0;
 	color: var(--black);
 	text-decoration: none;
 	text-transform: uppercase;
@@ -398,6 +415,7 @@ a.button-2:hover {
 	color: var(--color-2);
 }
 
+
 /* TÉMOIGNAGES CLIENTS 
 /* ========================================================================== */
 
@@ -432,11 +450,9 @@ a.button-2:hover {
 
 /*ref Freefrontend*/
 .blob {
-
 	border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
 	transition: border-radius 0.5s ease;
 	overflow: hidden;
-
 }
 
 .blob:hover {
@@ -450,15 +466,28 @@ a.button-2:hover {
 	display: block;
 }
 
-/*différentes tailles des images*/
 .width-xl {
-	width: 550px;
+	width: 100%;
+	height: 100%;
+	max-width: 550px;
+	max-height: 550px;
+}
+
+.illustrations {
+	max-width: 350px;
+	margin: auto;
 
 }
 
-.width-s {
-	max-width: 250px;
-	height: fit-content;
+.illustrations img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.5s ease-in;
+}
+
+.illustrations:hover img {
+	transform: scale(1.1);
 }
 
 /*Clients*/
@@ -484,18 +513,23 @@ ul.img-list {
 	padding: 0;
 	list-style-type: none;
 	grid-auto-flow: dense;
+	align-items: stretch;
+
+}
+
+.img-list li {
+	overflow: hidden;
 }
 
 .img-list img {
 	width: 100%;
-
-	border-radius: 0px 0px;
-	transition: border-radius 0.5s ease, transform 0.5s ease-in;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.5s ease-in;
 }
 
 .img-list img:hover {
 	transform: scale(1.1);
-	border-radius: 0px 30px;
 }
 
 .img-list li:nth-child(3) {
@@ -583,7 +617,6 @@ section.commande aside {
 
 table {
 	width: 100%;
-
 	border: var(--black) 2px solid;
 	border-collapse: separate;
 	border-spacing: 0;
@@ -595,8 +628,8 @@ table {
 
 thead th {
 	text-align: left;
-	font-size: 1.5rem;
-	background-color: none;
+	font-size: 1.25rem;
+	background: none;
 }
 
 .details tr:nth-child(2n) {
@@ -631,6 +664,18 @@ aside hr {
 	background-color: var(--black);
 }
 
+/**/
+aside table td:not(:has(a.button)) {
+	font-size: 1.35rem;
+	padding: 1rem 1.5rem;
+
+}
+
+
+aside table td:first-child {
+	font-weight: bold;
+}
+
 
 /* RESERVATION FORM
 /* ========================================================================== */
@@ -659,7 +704,7 @@ input,
 textarea,
 select {
 	width: 100%;
-	min-width: 20px;
+	min-width: 40px;
 	border: 2px solid var(--black);
 	border-radius: 10px;
 	padding-left: 1rem;
@@ -668,6 +713,11 @@ select {
 input,
 select {
 	height: 40px;
+}
+
+.checkbox {
+	display: flex;
+	align-items: center;
 }
 
 input[type=checkbox] {
@@ -776,9 +826,9 @@ address a:hover {
 .map-container {
 	position: relative;
 	width: 100%;
-	padding-bottom: 56.25%;
+	padding-bottom: 50%;
 	height: 0;
-	overflow: hidden;
+
 }
 
 .map-container iframe {
@@ -819,11 +869,9 @@ address a:hover {
 
 	/*ref Freefrontend*/
 	.blob {
-
 		border-radius: 40% 50% 20% 80% / 50% 60% 40% 50%;
 		transition: border-radius 0.5s ease;
 		overflow: hidden;
-
 	}
 
 	.blob:hover {
@@ -832,7 +880,9 @@ address a:hover {
 
 	.width-xl {
 		width: 100%;
-
+		height: 100%;
+		max-width: 750px;
+		max-height: 350px;
 	}
 
 	/* Contenu du témoignages*/
@@ -853,7 +903,7 @@ address a:hover {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 20px;
-		padding: 0;
+		padding: 1rem;
 		list-style-type: none;
 		grid-auto-flow: dense;
 	}
@@ -864,6 +914,15 @@ address a:hover {
 	.commande .flex {
 
 		flex-direction: column;
+	}
+
+	section.commande .details,
+	section.commande aside {
+		width: 100%;
+	}
+
+	.gap-40 {
+		gap: 0;
 	}
 
 }
@@ -945,9 +1004,6 @@ address a:hover {
 		font-size: 2rem;
 	}
 
-	.card {
-		padding: 1rem;
-	}
 
 	a.button,
 	a.button-2 {
@@ -965,7 +1021,19 @@ address a:hover {
 		grid-row: span 1;
 	}
 
+	.img-list li {
+		margin-bottom: 1rem;
+	}
 
+	/* # Flex*/
+	fieldset .flex {
+		flex-direction: column;
+	}
+
+	/* # Flex*/
+	fieldset .flex-1 {
+		flex: none;
+	}
 
 	/* Réseaux sociaux*/
 	footer .fa-solid,
