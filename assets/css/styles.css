@@ -546,7 +546,7 @@ ul.img-list {
 footer .fa-solid,
 footer .fa-brands {
 	width: 38px;
-	font-size: 35px;
+	font-size: 38px;
 	transition: transform 0.2s ease-in;
 }
 
@@ -1038,8 +1038,6 @@ address a:hover {
 	/* Réseaux sociaux*/
 	footer .fa-solid,
 	footer .fa-brands {
-		width: 20px;
-		font-size: 25px;
-		transition: transform 0.2s ease-in;
+		font-size: 30px;
 	}
 }
