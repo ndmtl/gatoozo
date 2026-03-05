@@ -523,7 +523,7 @@ ul.img-list {
 
 .img-list li {
 	overflow: hidden;
-	border-radius: 0 12px 12px 0;
+	border-radius: 12px;
 }
 
 .img-list img {
@@ -652,7 +652,7 @@ thead th {
 th,
 td {
 	text-align: left;
-	padding: 1.5rem;
+	padding: 1rem;
 }
 
 table .quantity,
@@ -902,12 +902,10 @@ address a:hover {
 
 	/* Galerie photos*/
 	ul.img-list {
-		width: 100%;
-		display: grid;
+
 		grid-template-columns: repeat(2, 1fr);
 		padding: 1rem;
-		list-style-type: none;
-		grid-auto-flow: dense;
+
 	}
 
 	/* # Flex*/
@@ -974,6 +972,14 @@ address a:hover {
 		font-size: 1.25rem;
 	}
 
+	.map-container {
+		position: relative;
+		width: 100%;
+		padding-bottom: 100%;
+		height: 0;
+
+	}
+
 }
 
 @media screen and (max-width: 450px) {
@@ -1006,14 +1012,15 @@ address a:hover {
 		font-size: 2rem;
 	}
 
-
 	a.button,
 	a.button-2 {
 		width: 95%;
+		text-align: center;
 	}
 
 	ul.img-list {
 		grid-template-columns: 1fr;
+		padding: 0;
 
 	}
 
