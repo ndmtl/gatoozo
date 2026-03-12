@@ -12,7 +12,6 @@
 	--color-4: #c7beae;
 	--color-5: #a3e9c0;
 	--white: #fff;
-
 }
 
 html {
@@ -20,7 +19,6 @@ html {
 	font-family: "Roboto", sans-serif;
 	color: var(--black);
 	line-height: 1;
-
 }
 
 
@@ -281,7 +279,6 @@ section.hero .container {
 	align-items: center;
 	justify-content: center;
 	grid-template-columns: 1fr 1fr;
-
 }
 
 section.hero p,
@@ -310,8 +307,6 @@ section.hero span {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
-
-
 }
 
 .menu .card {
@@ -335,7 +330,6 @@ section.hero span {
 
 p.price span {
 	font-size: 1.5rem;
-
 }
 
 .drink p {
@@ -392,7 +386,6 @@ a.button-2:hover {
 	color: var(--black);
 }
 
-
 /* CARDS
 /* ========================================================================== */
 
@@ -427,7 +420,6 @@ a.button-2:hover {
 .testimony .content {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-
 }
 
 .testimony .card {
@@ -495,7 +487,7 @@ a.button-2:hover {
 	transform: scale(1.1);
 }
 
-/*Clients*/
+/* Clients*/
 .avatar img {
 	width: 80px;
 	height: 80px;
@@ -505,7 +497,7 @@ a.button-2:hover {
 	border: var(--black) solid 2px;
 }
 
-/*Galerie photos dans restaurant*/
+/* Galerie photos dans restaurant*/
 .gallery {
 	background-color: var(--color-1);
 }
@@ -550,8 +542,8 @@ ul.img-list {
 /* Réseaux sociaux*/
 footer .fa-solid,
 footer .fa-brands {
-	width: 38px;
-	font-size: 38px;
+	width: 30px;
+	font-size: 30px;
 	transition: transform 0.2s ease-in;
 }
 
@@ -629,7 +621,6 @@ table {
 	margin: 2rem 0px;
 	overflow: hidden;
 }
-
 
 thead th {
 	text-align: left;
@@ -749,11 +740,9 @@ input[type=checkbox]::before {
 	transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-
 input[type=checkbox]:checked {
 	background-color: var(--color-2);
 	border-color: var(--color-2);
-
 }
 
 input[type=checkbox]:checked::before {
@@ -791,7 +780,7 @@ button[type="submit"]:hover {
 	color: var(--white);
 }
 
-/*confirmation*/
+/* Confirmation*/
 
 section.confirmation {
 	min-height: 50vh;
@@ -831,7 +820,6 @@ address a:hover {
 	width: 100%;
 	padding-bottom: 50%;
 	height: 0;
-
 }
 
 .map-container iframe {
@@ -892,7 +880,6 @@ address a:hover {
 	.testimony .content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-
 	}
 
 	a.button,
@@ -905,7 +892,6 @@ address a:hover {
 
 		grid-template-columns: repeat(2, 1fr);
 		padding: 1rem;
-
 	}
 
 	/* # Flex*/
@@ -947,19 +933,22 @@ address a:hover {
 	.menu .content {
 		display: grid;
 		grid-template-columns: 1fr;
+	}
 
+	a.button,
+	a.button-2 {
+		width: 95%;
+		text-align: center;
 	}
 
 	/* Contenu du témoignages*/
 	.testimony .content {
 		display: grid;
 		grid-template-columns: 1fr;
-
 	}
 
 	footer .flex:not(.social-networks.flex) {
 		flex-direction: column;
-
 	}
 
 	/* Tableaux*/
@@ -977,7 +966,6 @@ address a:hover {
 		width: 100%;
 		padding-bottom: 100%;
 		height: 0;
-
 	}
 
 }
@@ -1012,16 +1000,10 @@ address a:hover {
 		font-size: 2rem;
 	}
 
-	a.button,
-	a.button-2 {
-		width: 95%;
-		text-align: center;
-	}
 
 	ul.img-list {
 		grid-template-columns: 1fr;
 		padding: 0;
-
 	}
 
 	.img-list li:nth-child(3),
