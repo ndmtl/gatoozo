@@ -2,18 +2,18 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Gatoozo | Réservation d'une table</title>
-    <meta name="description" content="Réserver une table chez Gatoozo, restaurant atypique et chaleureux." />
+    <meta name="description" content="Réserver une table chez Gatoozo, restaurant atypique et chaleureux.">
 
     <!--Favicon-->
-    <link rel=" icon" type="image/x-icon" href="assets/img/gatoozo_favicon.png" />
+    <link rel=" icon" type="image/x-icon" href="assets/img/gatoozo_favicon.png">
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!--Styles-->
-    <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
 
@@ -29,8 +29,8 @@
             </div>
             <ul class="navigation flex">
                 <li><a href="index.html">Menu</a></li>
-                <li><a href="restaurant.html">Restaurant</a></li>
                 <li><a href="reservation.html" class="active">Réservation</a></li>
+                <li><a href="restaurant.html">Restaurant</a></li>
                 <li><a href="commande.html"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>Ma commande</a>
                 </li>
             </ul>
@@ -53,85 +53,91 @@
 
                 <form action="confirmation-reservation.html" method="get"
                     class="flex flex-between-vertical-center gap-l">
-                    <fieldset>
-                        <h2>Vos coordonnées</h2>
+                    <div class="formcol">
+                        <fieldset>
+                            <legend>Vos coordonnées</legend>
 
-                        <div>
-                            <label for="firstName">Prénom*</label>
-                            <input type="text" name="firstName" id="firstName" required />
-                        </div>
-                        <div>
-                            <label for="lastName">Nom*</label>
-                            <input type="text" name="lastName" id="lastName" required />
-                        </div>
-                        <div>
-                            <label for="phone">Téléphone*</label>
-                            <input type="tel" name="phone" id="phone" placeholder="xxx xxx-xxxx" required />
-                        </div>
-                        <div>
-                            <label for="email">Courriel</label>
-                            <input type="email" name="email" id="email" placeholder="nom@domaine.com" />
-                        </div>
-                    </fieldset>
-                    <fieldset>
+                            <div>
+                                <label for="firstName">Prénom*</label>
+                                <input type="text" name="firstName" id="firstName" required>
+                            </div>
+                            <div>
+                                <label for="lastName">Nom*</label>
+                                <input type="text" name="lastName" id="lastName" required>
+                            </div>
+                            <div>
+                                <label for="phone">Téléphone*</label>
+                                <input type="tel" name="phone" id="phone" placeholder="xxx xxx-xxxx" required>
+                            </div>
+                            <div>
+                                <label for="email">Courriel</label>
+                                <input type="email" name="email" id="email" placeholder="nom@domaine.com">
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="formcol">
+                        <fieldset>
 
-                        <h2>Votre réservation</h2>
+                            <legend>Votre réservation</legend>
 
-                        <div class="flex">
-                            <label for="nbPerson" class="flex-2">Nombre de personnes (max- 10)*</label>
-                            <input type="number" name="nbPerson" id="nbPerson" min="1" max="10" class="flex-1"
-                                placeholder="1" required />
-                        </div>
-                        <div class="flex">
-                            <label for="preference" class="flex-2"> Préférence*</label>
-                            <select name="preference" id="preference" class="flex-1" required>
-                                <option value="" selected>Choisissez</option>
-                                <option value="salle à manger">Salle à manger</option>
-                                <option value="terrasse">Terrasse</option>
-                            </select>
-                        </div>
-                        <div class="flex">
-                            <label for="dateReservation" class="flex-2"> Date* </label>
-                            <input type="date" name="dateReservation" id="dateReservation" lang="fr" class="flex-1"
-                                required />
-                        </div>
-                        <div class="flex">
-                            <label for="hourReservation" class="flex-2">Heure*</label>
-                            <select name="hourReservation" id="hourReservation" class="flex-1" required>
-                                <option value="">Choisissez</option>
-                                <option value="12:00">12:00</option>
-                                <option value="12:30">12:30</option>
-                                <option value="13:00">13:00</option>
-                                <option value="13:30">13:30</option>
-                                <option value="14:00">14:00</option>
-                                <option value="14:30">14:30</option>
-                                <option value="15:00">15:00</option>
-                                <option value="15:30">15:30</option>
-                                <option value="16:00">16:00</option>
-                                <option value="16:30">16:30</option>
-                                <option value="17:00">17:00</option>
-                                <option value="17:30">17:30</option>
-                                <option value="18:00">18:00</option>
-                                <option value="18:30">18:30</option>
-                                <option value="19:00">19:00</option>
-                                <option value="19:30">19:30</option>
-                                <option value="20:00">20:00</option>
-                                <option value="20:30">20:30</option>
-                                <option value="21:00">21:00</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message">Message additionnel</label>
-                            <textarea name="message" id="message" rows="3"> </textarea>
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" name="newsletter" id="newsletter" />
-                            <label for="newsletter">Voulez-vous recevoir l'infolettre ?</label>
-                        </div>
-                        <div>
-                            <button type="submit">Soumettre</button>
-                        </div>
-                    </fieldset>
+                            <div class="flex">
+                                <label for="nbPerson" class="flex-2">Nombre de personnes (max. 10)*</label>
+                                <input type="number" name="nbPerson" id="nbPerson" min="1" max="10" class="flex-1"
+                                    placeholder="1" required>
+                            </div>
+                            <div class="flex">
+                                <label for="preference" class="flex-2"> Préférence*</label>
+                                <select name="preference" id="preference" class="flex-1" required>
+                                    <option value="" selected>Choisissez</option>
+                                    <option value="salle à manger">Salle à manger</option>
+                                    <option value="terrasse">Terrasse</option>
+                                </select>
+                            </div>
+                            <div class="flex">
+                                <label for="dateReservation" class="flex-2"> Date* </label>
+                                <input type="date" name="dateReservation" id="dateReservation" lang="fr" class="flex-1"
+                                    required>
+                            </div>
+                            <div class="flex">
+                                <label for="hourReservation" class="flex-2">Heure*</label>
+                                <select name="hourReservation" id="hourReservation" class="flex-1" required>
+                                    <option value="">Choisissez</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="13:30">13:30</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="14:30">14:30</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="15:30">15:30</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="16:30">16:30</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="17:30">17:30</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="18:30">18:30</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:00">21:00</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message">Message additionnel</label>
+                                <textarea name="message" id="message" rows="3"> </textarea>
+                            </div>
+                            <div class="checkbox">
+                                <label for="newsletter">Voulez-vous recevoir l'infolettre ?</label>
+                                <input type="checkbox" name="newsletter" id="newsletter">
+
+                            </div>
+                            <div>
+
+                            </div>
+                        </fieldset>
+                        <button type="submit">Soumettre</button>
+                    </div>
                 </form>
             </div>
         </section>
@@ -145,8 +151,9 @@
                 <li>
                     <ul class="social-networks flex flex-between gap-s">
                         <li>
-                            <a href="mailto:nathalie.depierre@gmail.com?subject=Contact">
-                                <i class="fa-solid fa-envelope" aria-label="Enveloppe pour courriel" role="img"></i>
+                            <a href="mailto:nathalie.depierre@gmail.com?subject=Contact"
+                                aria-label="Envoyer un courriel à Nathalie Depierre">
+                                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>Réalisé par Nathalie Depierre</li>
@@ -160,8 +167,8 @@
                         <!--Icon1-->
                         <li>
                             <!--Facebook-->
-                            <a href="#">
-                                <i class="fa-brands fa-square-facebook" aria-label="Facebook" role="img"></i>
+                            <a href="#" aria-label="Facebook">
+                                <i class="fa-brands fa-square-facebook" aria-hidden="true"></i>
                             </a>
                             <!--Facebook-->
                         </li>
@@ -169,8 +176,8 @@
                         <!--Icon2-->
                         <li>
                             <!--Linkedin-->
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin" aria-label="Linkedin" role="img"></i>
+                            <a href="#" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                             </a>
                             <!--Linkedin-->
                         </li>
@@ -178,8 +185,8 @@
                         <!--Icon3-->
                         <li>
                             <!--X-->
-                            <a href="#">
-                                <i class="fa-brands fa-x-twitter" aria-label="Twitter X " role="img"></i>
+                            <a href="#" aria-label="Twitter X">
+                                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
                             </a>
                             <!--X-->
                         </li>
@@ -187,8 +194,8 @@
                         <!--Icon4-->
                         <li>
                             <!--Instagram-->
-                            <a href="#">
-                                <i class="fa-brands fa-square-instagram" aria-label="Instagram" role="img"></i>
+                            <a href="#" aria-label="Instagram">
+                                <i class="fa-brands fa-square-instagram" aria-hidden="true"></i>
                             </a>
                             <!--Instagram-->
                         </li>
