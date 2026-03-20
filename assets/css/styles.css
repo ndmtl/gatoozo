@@ -44,7 +44,7 @@ h4 {
 	font-family: "Phudu", sans-serif;
 	font-weight: 900;
 	font-style: normal;
-	padding-bottom: 0.8rem;
+
 }
 
 /* Ligne sous titres sauf sur la page d'accueil */
@@ -55,6 +55,7 @@ h1:after {
 	height: 10px;
 	background-color: var(--black);
 	margin-top: 15px;
+
 }
 
 h1.no-decoration::after {
@@ -73,7 +74,7 @@ h2 {
 h3 {
 	font-size: 2rem;
 	margin-top: 0;
-	margin-bottom: 2rem;
+	margin: 1rem 0 2rem 0;
 }
 
 p {
@@ -247,6 +248,7 @@ section.hero span {
 .hero div h1 {
 	font-size: 4rem;
 	margin: 10px 0 10px 0;
+	max-width: 70%;
 }
 
 .hero p {
@@ -580,7 +582,7 @@ table {
 	border-collapse: separate;
 	border-spacing: 0;
 	border-radius: 12px;
-	margin: 2rem 0px;
+	margin: 1rem 0 1rem 0;
 	overflow: hidden;
 }
 
