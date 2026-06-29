@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!--Script-->
+    <script type="javascript" src="/assets/js/script.js" defer></script>
+
 </head>
 
 <body>
@@ -51,27 +54,31 @@
             <div class="container">
                 <h1>Réserver une table</h1>
 
-                <form action="confirmation-reservation.html" method="get"
-                    class="flex flex-between-vertical-center gap-l">
+                <form action="confirmation-reservation.html" method="post" id="reservationForm"
+                    class="flex flex-between-vertical-center gap-l" novalidate>
                     <div class="formcol">
                         <fieldset>
                             <legend>Vos coordonnées</legend>
 
-                            <div>
+                            <div class="input-control">
                                 <label for="firstName">Prénom*</label>
                                 <input type="text" name="firstName" id="firstName" required>
+                                <div class="errorMessage"></div>
                             </div>
-                            <div>
+                            <div class="input-control">
                                 <label for="lastName">Nom*</label>
                                 <input type="text" name="lastName" id="lastName" required>
+                                <div class="errorMessage"></div>
                             </div>
-                            <div>
+                            <div class="input-control">
                                 <label for="phone">Téléphone*</label>
                                 <input type="tel" name="phone" id="phone" placeholder="xxx xxx-xxxx" required>
+                                <div class="errorMessage"></div>
                             </div>
-                            <div>
+                            <div class="input-control">
                                 <label for="email">Courriel</label>
                                 <input type="email" name="email" id="email" placeholder="nom@domaine.com">
+                                <div class="errorMessage"></div>
                             </div>
                         </fieldset>
                     </div>
@@ -80,25 +87,28 @@
 
                             <legend>Votre réservation</legend>
 
-                            <div class="flex">
+                            <div class="flex input-control">
                                 <label for="nbPerson" class="flex-2">Nombre de personnes (max. 10)*</label>
                                 <input type="number" name="nbPerson" id="nbPerson" min="1" max="10" class="flex-1"
                                     placeholder="1" required>
+                                <div class="errorMessage"></div>
                             </div>
-                            <div class="flex">
+                            <div class="flex input-control">
                                 <label for="preference" class="flex-2"> Préférence*</label>
                                 <select name="preference" id="preference" class="flex-1" required>
                                     <option value="" selected>Choisissez</option>
                                     <option value="salle à manger">Salle à manger</option>
                                     <option value="terrasse">Terrasse</option>
                                 </select>
+                                <div class="errorMessage"></div>
                             </div>
-                            <div class="flex">
+                            <div class="flex input-control">
                                 <label for="dateReservation" class="flex-2"> Date* </label>
                                 <input type="date" name="dateReservation" id="dateReservation" lang="fr" class="flex-1"
                                     required>
+                                <div class="errorMessage"></div>
                             </div>
-                            <div class="flex">
+                            <div class="flex input-control">
                                 <label for="hourReservation" class="flex-2">Heure*</label>
                                 <select name="hourReservation" id="hourReservation" class="flex-1" required>
                                     <option value="">Choisissez</option>
@@ -123,6 +133,7 @@
                                     <option value="21:00">21:00</option>
                                 </select>
                             </div>
+                            <div class="errorMessage"></div>
                             <div>
                                 <label for="message">Message additionnel</label>
                                 <textarea name="message" id="message" rows="3"> </textarea>

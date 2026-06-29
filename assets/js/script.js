@@ -1,0 +1,1 @@
+const reservationForm = document.getElementById('reservationForm');
