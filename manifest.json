@@ -1,19 +1,16 @@
 {
   "name": "Application Gatoozo",
   "short_name": "GatApp",
+  "description": "Application du restaurant Gatoozo",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#e9714d",
   "theme_color": "#000",
 "icons": [
-  {
-    "src": "assets/icons/icon-192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  },
+
   {
     "src": "assets/icons/icon-512.png",
-    "sizes": "512x512",
+    "sizes": "501x501",
     "type": "image/png"
   }
 ]
