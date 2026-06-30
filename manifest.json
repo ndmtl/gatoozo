@@ -17,13 +17,13 @@
 "screenshots": [
     {
       "src": "assets/icons/screenshot-desktop.png",
-      "sizes": "1024x634",
+      "sizes": "2048x1268",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
       "src": "assets/icons/screenshot-mobile.png",
-      "sizes": "698x10475",
+      "sizes": "780x1450",
       "type": "image/png"
     }
   ]
