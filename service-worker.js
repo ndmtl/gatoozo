@@ -1,8 +1,3 @@
-// ============================================================
-//  Service Worker — solutionnaire Bloc-notes PWA
-//  Change le numéro de version chaque fois que tu modifies un
-//  des fichiers mis en cache, sinon l'ancienne version reste servie.
-// ============================================================
 const CACHE_NAME = 'offline-v1';
 
 // Fichiers indispensables au fonctionnement hors-ligne (le « app shell »)
@@ -13,6 +8,7 @@ const FILES_TO_CACHE = [
     '/reservation.html',
     '/commande.html',
     '/confirmation-reservation.html',
+    '/offline.html',
     '/assets/css/styles.css',
     '/assets/js/script.js',
     '/js/ios-hint.js',
@@ -43,7 +39,7 @@ const FILES_TO_CACHE = [
     '/assets/img/pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg',
     '/assets/img/paulo-doi-6uTQmtqcAzs-unsplash.jpg',
     '/assets/img/sebastian-coman-photography-nQqNjfOVvrs-unsplash.jpg',
-    '/assets/img/assets/img/Sophie_Martin.jpg'
+    '/assets/img/Sophie_Martin.jpg'
 ];
 
 // ----- INSTALL : on précache l'app shell -----
@@ -55,7 +51,6 @@ self.addEventListener('install', (evt) => {
             return cache.addAll(FILES_TO_CACHE);
         })
     );
-    // Active immédiatement le nouveau service worker
     self.skipWaiting();
 });
 
@@ -70,31 +65,30 @@ self.addEventListener('activate', (evt) => {
                         console.log('[SW] Suppression de l\'ancienne cache', key);
                         return caches.delete(key);
                     }
+                    return Promise.resolve();
                 })
             )
         )
     );
-    // Prend le contrôle des pages déjà ouvertes
     self.clients.claim();
 });
 
-// ----- FETCH : on choisit une stratégie selon le type de requête -----
+// ----- FETCH : stratégies selon la requête -----
 self.addEventListener('fetch', (evt) => {
     const { request } = evt;
 
-    // On ne gère que les requêtes GET
     if (request.method !== 'GET') return;
 
-    // 1) Navigation (l'usager ouvre une page) -> NETWORK FIRST
-    //    On tente le réseau, et en cas d'échec on sert la cache,
-    //    puis offline.html en dernier recours.
+    // 1) Navigation -> NETWORK FIRST (avec fallback offline.html)
     if (request.mode === 'navigate') {
         evt.respondWith(
             fetch(request)
                 .then((response) => {
-                    // On met à jour la cache au passage
-                    const copy = response.clone();
-                    caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+                    // Sécurité : On ne cache que les réponses valides
+                    if (response.status === 200) {
+                        const copy = response.clone();
+                        caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+                    }
                     return response;
                 })
                 .catch(async () => {
@@ -105,15 +99,17 @@ self.addEventListener('fetch', (evt) => {
         return;
     }
 
-    // 2) Autres ressources (CSS, JS, images) -> CACHE FIRST
-    //    On sert la cache si elle existe, sinon le réseau (et on met en cache).
+    // 2) Autres ressources -> CACHE FIRST
     evt.respondWith(
         caches.match(request).then((cached) => {
             return (
                 cached ||
                 fetch(request).then((response) => {
-                    const copy = response.clone();
-                    caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+                    // Sécurité : On ne cache que si c'est un succès du réseau
+                    if (response.status === 200) {
+                        const copy = response.clone();
+                        caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+                    }
                     return response;
                 })
             );
