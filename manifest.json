@@ -1,7 +1,7 @@
 {
   "name": "Application Gatoozo",
   "short_name": "GatApp",
-  "description": "Application du restaurant Gatoozo",
+  "description": "Application du restaurant Gatoozo, vous pouvez réserver une table ou commander en ligne.",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#e9714d",
